@@ -74,7 +74,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Theme = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1.SuspendLayout();
@@ -436,6 +436,7 @@
             this.dateTimePicker_In.Name = "dateTimePicker_In";
             this.dateTimePicker_In.Size = new System.Drawing.Size(237, 23);
             this.dateTimePicker_In.TabIndex = 33;
+            this.dateTimePicker_In.ValueChanged += new System.EventHandler(this.dateTimePicker_In_ValueChanged);
             // 
             // ComboBox_RoomType_Reservation
             // 
@@ -584,7 +585,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.comboBox_Theme);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
@@ -593,18 +594,18 @@
             this.tabPage4.Text = "Settings";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBox_Theme
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_Theme.FormattingEnabled = true;
+            this.comboBox_Theme.Items.AddRange(new object[] {
             "Light Mode",
             "Dark Mode",
             "System Default"});
-            this.comboBox1.Location = new System.Drawing.Point(8, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 24);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox_Theme.Location = new System.Drawing.Point(8, 31);
+            this.comboBox_Theme.Name = "comboBox_Theme";
+            this.comboBox_Theme.Size = new System.Drawing.Size(108, 24);
+            this.comboBox_Theme.TabIndex = 1;
+            this.comboBox_Theme.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -720,7 +721,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dateTimePicker_In;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_Theme;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
