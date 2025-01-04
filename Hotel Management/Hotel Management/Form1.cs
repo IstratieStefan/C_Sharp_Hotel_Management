@@ -668,12 +668,14 @@ namespace Hotel_Management
 
         private void addUser_btn_Click(object sender, EventArgs e)
         {
-
+            AddUserForm addUserForm = new AddUserForm();
+            addUserForm.ShowDialog();
         }
 
         private void rmUser_btn_Click(object sender, EventArgs e)
         {
-
+            RemoveUserForm removeUserForm = new RemoveUserForm();
+            removeUserForm.ShowDialog();
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Hotel_Management
             string dbPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HotelDB.mdf");
             connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True";
         }
+        public string ConnectionString => connectionString;
 
         public void AddUser(string username, string password)
         {

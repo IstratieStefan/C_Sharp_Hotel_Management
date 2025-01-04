@@ -51,3 +51,5 @@ C:\Users\tihoc\Desktop\C-Project\C_Sharp_Hotel_Management\Hotel Management\Hotel
 C:\Users\tihoc\Desktop\C-Project\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab2DB_log.ldf
 C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab3DB.mdf
 C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab3DB_log.ldf
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.AddUserForm.resources
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.RemoveUserForm.resources
