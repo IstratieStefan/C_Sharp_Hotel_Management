@@ -46,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.TextBox_Search = new System.Windows.Forms.TextBox();
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -61,6 +63,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.TextBox_RoomNumber = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.ButtonSearch2 = new System.Windows.Forms.Button();
+            this.TextBox_Search2 = new System.Windows.Forms.TextBox();
             this.dataGridViewRooms = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dateTimePicker_Out = new System.Windows.Forms.DateTimePicker();
@@ -80,16 +84,13 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.comboBox_Theme = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.TextBox_Search = new System.Windows.Forms.TextBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.ButtonSearch2 = new System.Windows.Forms.Button();
-            this.TextBox_Search2 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.comboBox_Theme = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -128,7 +129,7 @@
             this.tabPage1.Controls.Add(this.splitContainer1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(792, 421);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Manage Clients";
@@ -307,25 +308,47 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "First Name";
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSearch.Location = new System.Drawing.Point(448, 392);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 16;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.Search_clients_Click);
+            // 
+            // TextBox_Search
+            // 
+            this.TextBox_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TextBox_Search.Location = new System.Drawing.Point(0, 392);
+            this.TextBox_Search.Name = "TextBox_Search";
+            this.TextBox_Search.Size = new System.Drawing.Size(523, 23);
+            this.TextBox_Search.TabIndex = 15;
+            this.TextBox_Search.Text = "Search...";
+            // 
             // dataGridViewClients
             // 
             this.dataGridViewClients.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewClients.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.RowHeadersWidth = 51;
             this.dataGridViewClients.RowTemplate.Height = 24;
             this.dataGridViewClients.Size = new System.Drawing.Size(523, 415);
             this.dataGridViewClients.TabIndex = 0;
+            this.dataGridViewClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellClick);
+            this.dataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellContentClick);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.splitContainer2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(792, 421);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manage Rooms";
@@ -369,7 +392,7 @@
             "Yes",
             "No"});
             this.ComboBox_Free.Location = new System.Drawing.Point(8, 161);
-            this.ComboBox_Free.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox_Free.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox_Free.Name = "ComboBox_Free";
             this.ComboBox_Free.Size = new System.Drawing.Size(233, 24);
             this.ComboBox_Free.TabIndex = 34;
@@ -383,7 +406,7 @@
             "3-Apartment",
             "4-Suite"});
             this.ComboBox_RoomType.Location = new System.Drawing.Point(7, 68);
-            this.ComboBox_RoomType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox_RoomType.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox_RoomType.Name = "ComboBox_RoomType";
             this.ComboBox_RoomType.Size = new System.Drawing.Size(234, 24);
             this.ComboBox_RoomType.TabIndex = 33;
@@ -502,13 +525,33 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_3);
             // 
+            // ButtonSearch2
+            // 
+            this.ButtonSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonSearch2.Location = new System.Drawing.Point(446, 392);
+            this.ButtonSearch2.Name = "ButtonSearch2";
+            this.ButtonSearch2.Size = new System.Drawing.Size(75, 23);
+            this.ButtonSearch2.TabIndex = 31;
+            this.ButtonSearch2.Text = "Search";
+            this.ButtonSearch2.UseVisualStyleBackColor = true;
+            this.ButtonSearch2.Click += new System.EventHandler(this.ButtonSearch2_Click);
+            // 
+            // TextBox_Search2
+            // 
+            this.TextBox_Search2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TextBox_Search2.Location = new System.Drawing.Point(0, 392);
+            this.TextBox_Search2.Name = "TextBox_Search2";
+            this.TextBox_Search2.Size = new System.Drawing.Size(521, 23);
+            this.TextBox_Search2.TabIndex = 30;
+            this.TextBox_Search2.Text = "Search...";
+            // 
             // dataGridViewRooms
             // 
             this.dataGridViewRooms.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRooms.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewRooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewRooms.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewRooms.Name = "dataGridViewRooms";
             this.dataGridViewRooms.RowHeadersWidth = 51;
             this.dataGridViewRooms.RowTemplate.Height = 24;
@@ -713,6 +756,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button11);
             this.tabPage4.Controls.Add(this.button10);
             this.tabPage4.Controls.Add(this.label18);
             this.tabPage4.Controls.Add(this.button9);
@@ -726,66 +770,14 @@
             this.tabPage4.Text = "Settings";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // comboBox_Theme
+            // button11
             // 
-            this.comboBox_Theme.FormattingEnabled = true;
-            this.comboBox_Theme.Items.AddRange(new object[] {
-            "Light Mode",
-            "Dark Mode",
-            "System Default"});
-            this.comboBox_Theme.Location = new System.Drawing.Point(8, 31);
-            this.comboBox_Theme.Name = "comboBox_Theme";
-            this.comboBox_Theme.Size = new System.Drawing.Size(108, 24);
-            this.comboBox_Theme.TabIndex = 1;
-            this.comboBox_Theme.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Theme";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // TextBox_Search
-            // 
-            this.TextBox_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TextBox_Search.Location = new System.Drawing.Point(0, 392);
-            this.TextBox_Search.Name = "TextBox_Search";
-            this.TextBox_Search.Size = new System.Drawing.Size(523, 23);
-            this.TextBox_Search.TabIndex = 15;
-            this.TextBox_Search.Text = "Search...";
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearch.Location = new System.Drawing.Point(448, 392);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 16;
-            this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.Search_clients_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 67);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 16);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "Users";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(49, 64);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Add Users";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button11.Location = new System.Drawing.Point(130, 65);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(89, 23);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Remove User";
+            this.button11.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
@@ -807,25 +799,45 @@
             this.label18.Text = "Database";
             this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
-            // ButtonSearch2
+            // button9
             // 
-            this.ButtonSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonSearch2.Location = new System.Drawing.Point(446, 392);
-            this.ButtonSearch2.Name = "ButtonSearch2";
-            this.ButtonSearch2.Size = new System.Drawing.Size(75, 23);
-            this.ButtonSearch2.TabIndex = 31;
-            this.ButtonSearch2.Text = "Search";
-            this.ButtonSearch2.UseVisualStyleBackColor = true;
-            this.ButtonSearch2.Click += new System.EventHandler(this.ButtonSearch2_Click);
+            this.button9.Location = new System.Drawing.Point(49, 64);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Add User";
+            this.button9.UseVisualStyleBackColor = true;
             // 
-            // TextBox_Search2
+            // label17
             // 
-            this.TextBox_Search2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TextBox_Search2.Location = new System.Drawing.Point(0, 392);
-            this.TextBox_Search2.Name = "TextBox_Search2";
-            this.TextBox_Search2.Size = new System.Drawing.Size(521, 23);
-            this.TextBox_Search2.TabIndex = 30;
-            this.TextBox_Search2.Text = "Search...";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(8, 67);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 16);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Users";
+            // 
+            // comboBox_Theme
+            // 
+            this.comboBox_Theme.FormattingEnabled = true;
+            this.comboBox_Theme.Items.AddRange(new object[] {
+            "Light Mode",
+            "Dark Mode"});
+            this.comboBox_Theme.Location = new System.Drawing.Point(8, 31);
+            this.comboBox_Theme.Name = "comboBox_Theme";
+            this.comboBox_Theme.Size = new System.Drawing.Size(108, 24);
+            this.comboBox_Theme.TabIndex = 1;
+            this.comboBox_Theme.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Theme";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // Form1
             // 
@@ -925,6 +937,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button ButtonSearch2;
         private System.Windows.Forms.TextBox TextBox_Search2;
+        private System.Windows.Forms.Button button11;
     }
 }
 

@@ -591,6 +591,10 @@ namespace Hotel_Management
         {
 
         }
-        
+
+        private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }
