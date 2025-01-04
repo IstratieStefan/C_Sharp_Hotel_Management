@@ -522,5 +522,75 @@ namespace Hotel_Management
         {
 
         }
+
+        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        // Clients search query function on button click
+        private void Search_clients_Click(object sender, EventArgs e)
+        {
+            string searchTerm = TextBox_Search.Text.ToLower();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                // Loop through rows in DataGridView to find matches
+                foreach (DataGridViewRow row in dataGridViewClients.Rows)
+                {
+                    row.DefaultCellStyle.BackColor = Color.White; 
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchTerm))
+                        {
+                            row.DefaultCellStyle.BackColor = Color.LightSkyBlue; 
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a search term.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        // Rooms search query function on button click
+        private void ButtonSearch2_Click(object sender, EventArgs e)
+        {
+            string searchTerm = TextBox_Search2.Text.ToLower();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+                {
+                    // Loop through rows in DataGridView to find matches
+                    foreach (DataGridViewRow row in dataGridViewRooms.Rows)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.White;
+
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchTerm))
+                            {
+                                row.DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                                break;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a search term.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+        }
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }
