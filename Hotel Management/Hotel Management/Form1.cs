@@ -11,7 +11,10 @@ using System.Windows.Forms;
 namespace Hotel_Management
 {
     public partial class Form1 : Form
+
     {
+        private Tab1Handler tab1Handler;
+        private Tab2Handler tab2Handler;
         private readonly Color lightBackColor = Color.White;
         private readonly Color lightForeColor = Color.Black;
 
@@ -21,11 +24,22 @@ namespace Hotel_Management
         public Form1()
         {
             InitializeComponent();
+            tab1Handler = new Tab1Handler();
+            tab2Handler = new Tab2Handler();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            LoadDataTab1();
+            LoadDataTab2();
+        }
+        private void LoadDataTab1()
+        {
+            dataGridViewClients.DataSource = tab1Handler.GetAllData();
+        }
+        private void LoadDataTab2()
+        {
+            dataGridViewRooms.DataSource = tab2Handler.GetAllRooms();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,22 +49,51 @@ namespace Hotel_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            tab1Handler.AddData(TextBox_Id.Text, TextBox_FirstName.Text, TextBox_LastName.Text, TextBox_PhoneNumber.Text, TextBox_Country.Text);
+            LoadDataTab1();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            tab1Handler.EditData(TextBox_Id.Text, TextBox_FirstName.Text, TextBox_LastName.Text, TextBox_PhoneNumber.Text, TextBox_Country.Text);
+            LoadDataTab1();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            tab1Handler.RemoveData(TextBox_Id.Text);
+            LoadDataTab1();
         }
-
+        private void dataGridViewClients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewClients.Rows[e.RowIndex];
+                TextBox_Id.Text = row.Cells["Id"].Value.ToString();
+                TextBox_FirstName.Text = row.Cells["FirstName"].Value.ToString();
+                TextBox_LastName.Text = row.Cells["LastName"].Value.ToString();
+                TextBox_PhoneNumber.Text = row.Cells["Phone"].Value.ToString();
+                TextBox_Country.Text = row.Cells["Country"].Value.ToString();
+            }
+        }
+        private void dataGridViewRooms_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewRooms.Rows[e.RowIndex];
+                TextBox_RoomNumber.Text = row.Cells["Number"].Value.ToString();
+                TextBox_RoomType.Text = row.Cells["Type"].Value.ToString();
+                TextBox_RoomPhone.Text = row.Cells["Phone"].Value.ToString();
+                TextBox_RoomFree.Text = row.Cells["Free"].Value.ToString();
+            }
+        }
         private void button1_Click_2(object sender, EventArgs e)
         {
-
+            TextBox_Id.Text = string.Empty;
+            TextBox_FirstName.Text = string.Empty;
+            TextBox_LastName.Text = string.Empty;
+            TextBox_PhoneNumber.Text = string.Empty;
+            TextBox_Country.Text = string.Empty;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -410,6 +453,48 @@ namespace Hotel_Management
         private void dateTimePicker_In_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox_Id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int number = Convert.ToInt32(TextBox_RoomNumber.Text);
+            int type = Convert.ToInt32(TextBox_RoomType.Text);
+            string phone = TextBox_RoomPhone.Text;
+            string free = TextBox_RoomFree.Text;
+
+            tab2Handler.AddRoom(number, type, phone, free);
+            LoadDataTab2();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int number = Convert.ToInt32(TextBox_RoomNumber.Text);
+            int type = Convert.ToInt32(TextBox_RoomType.Text);
+            string phone = TextBox_RoomPhone.Text;
+            string free = TextBox_RoomFree.Text;
+
+            tab2Handler.EditRoom(number, type, phone, free);
+            LoadDataTab2();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            int number = Convert.ToInt32(TextBox_RoomNumber.Text);
+            tab2Handler.RemoveRoom(number);
+            LoadDataTab2();
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            TextBox_RoomNumber.Text = string.Empty;
+            TextBox_RoomType.Text = string.Empty;
+            TextBox_RoomPhone.Text = string.Empty;
+            TextBox_RoomFree.Text = string.Empty;
         }
     }
 }

@@ -24,3 +24,20 @@ C:\Users\tihoc\Desktop\C-Project\C_Sharp_Hotel_Management\Hotel Management\Hotel
 C:\Users\istra\OneDrive\Documenti\Github\C-Project\Hotel Management\Hotel Management\bin\Debug\HotelDB.mdf
 C:\Users\istra\OneDrive\Documenti\Github\C-Project\Hotel Management\Hotel Management\bin\Debug\HotelDB_log.ldf
 C:\Users\istra\OneDrive\Documenti\Github\C-Project\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.LoginForm.resources
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\HotelDB.mdf
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\HotelDB_log.ldf
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Hotel Management.exe.config
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Hotel Management.exe
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Hotel Management.pdb
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel Management.csproj.AssemblyReference.cache
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Form1.resources
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.LoginForm.resources
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Properties.Resources.resources
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel Management.csproj.GenerateResource.cache
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel Management.csproj.CoreCompileInputs.cache
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel Management.exe
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\obj\Debug\Hotel Management.pdb
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab1DB.mdf
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab1DB_log.ldf
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab2DB.mdf
+C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab2DB_log.ldf
