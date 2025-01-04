@@ -76,11 +76,15 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -101,20 +105,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.Controls.Add(this.Clear_Button);
-            this.tabPage1.Controls.Add(this.Remove_Button);
-            this.tabPage1.Controls.Add(this.Edit_Button);
-            this.tabPage1.Controls.Add(this.Add_New_Button);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.TextBox_Country);
-            this.tabPage1.Controls.Add(this.TextBox_PhoneNumber);
-            this.tabPage1.Controls.Add(this.TextBox_LastName);
-            this.tabPage1.Controls.Add(this.TextBox_FirstName);
-            this.tabPage1.Controls.Add(this.TextBox_Id);
+            this.tabPage1.Controls.Add(this.splitContainer1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -125,11 +116,10 @@
             // 
             // Clear_Button
             // 
-            this.Clear_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Clear_Button.BackColor = System.Drawing.Color.Transparent;
             this.Clear_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clear_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Clear_Button.Location = new System.Drawing.Point(8, 390);
+            this.Clear_Button.Location = new System.Drawing.Point(5, 384);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(237, 23);
             this.Clear_Button.TabIndex = 13;
@@ -139,11 +129,10 @@
             // 
             // Remove_Button
             // 
-            this.Remove_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Remove_Button.BackColor = System.Drawing.Color.Transparent;
             this.Remove_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Remove_Button.Location = new System.Drawing.Point(170, 361);
+            this.Remove_Button.Location = new System.Drawing.Point(167, 355);
             this.Remove_Button.Name = "Remove_Button";
             this.Remove_Button.Size = new System.Drawing.Size(75, 23);
             this.Remove_Button.TabIndex = 12;
@@ -153,11 +142,10 @@
             // 
             // Edit_Button
             // 
-            this.Edit_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Edit_Button.BackColor = System.Drawing.Color.Transparent;
             this.Edit_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Edit_Button.Location = new System.Drawing.Point(89, 361);
+            this.Edit_Button.Location = new System.Drawing.Point(86, 355);
             this.Edit_Button.Name = "Edit_Button";
             this.Edit_Button.Size = new System.Drawing.Size(75, 23);
             this.Edit_Button.TabIndex = 11;
@@ -167,11 +155,10 @@
             // 
             // Add_New_Button
             // 
-            this.Add_New_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Add_New_Button.BackColor = System.Drawing.Color.Transparent;
             this.Add_New_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_New_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Add_New_Button.Location = new System.Drawing.Point(8, 361);
+            this.Add_New_Button.Location = new System.Drawing.Point(5, 355);
             this.Add_New_Button.Name = "Add_New_Button";
             this.Add_New_Button.Size = new System.Drawing.Size(75, 23);
             this.Add_New_Button.TabIndex = 10;
@@ -182,7 +169,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 190);
+            this.label5.Location = new System.Drawing.Point(2, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 16);
             this.label5.TabIndex = 9;
@@ -191,7 +178,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 148);
+            this.label4.Location = new System.Drawing.Point(2, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 16);
             this.label4.TabIndex = 8;
@@ -200,7 +187,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 102);
+            this.label3.Location = new System.Drawing.Point(2, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 7;
@@ -209,7 +196,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 60);
+            this.label2.Location = new System.Drawing.Point(2, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 6;
@@ -218,7 +205,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 14);
+            this.label1.Location = new System.Drawing.Point(2, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(17, 16);
             this.label1.TabIndex = 5;
@@ -228,7 +215,7 @@
             // TextBox_Country
             // 
             this.TextBox_Country.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Country.Location = new System.Drawing.Point(8, 209);
+            this.TextBox_Country.Location = new System.Drawing.Point(5, 203);
             this.TextBox_Country.Name = "TextBox_Country";
             this.TextBox_Country.Size = new System.Drawing.Size(237, 24);
             this.TextBox_Country.TabIndex = 4;
@@ -236,7 +223,7 @@
             // TextBox_PhoneNumber
             // 
             this.TextBox_PhoneNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_PhoneNumber.Location = new System.Drawing.Point(8, 164);
+            this.TextBox_PhoneNumber.Location = new System.Drawing.Point(5, 158);
             this.TextBox_PhoneNumber.Name = "TextBox_PhoneNumber";
             this.TextBox_PhoneNumber.Size = new System.Drawing.Size(237, 24);
             this.TextBox_PhoneNumber.TabIndex = 3;
@@ -244,7 +231,7 @@
             // TextBox_LastName
             // 
             this.TextBox_LastName.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_LastName.Location = new System.Drawing.Point(8, 121);
+            this.TextBox_LastName.Location = new System.Drawing.Point(5, 115);
             this.TextBox_LastName.Name = "TextBox_LastName";
             this.TextBox_LastName.Size = new System.Drawing.Size(237, 24);
             this.TextBox_LastName.TabIndex = 2;
@@ -252,15 +239,16 @@
             // TextBox_FirstName
             // 
             this.TextBox_FirstName.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_FirstName.Location = new System.Drawing.Point(8, 76);
+            this.TextBox_FirstName.Location = new System.Drawing.Point(5, 70);
             this.TextBox_FirstName.Name = "TextBox_FirstName";
             this.TextBox_FirstName.Size = new System.Drawing.Size(237, 24);
             this.TextBox_FirstName.TabIndex = 1;
             // 
             // TextBox_Id
             // 
+            this.TextBox_Id.AllowDrop = true;
             this.TextBox_Id.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Id.Location = new System.Drawing.Point(8, 33);
+            this.TextBox_Id.Location = new System.Drawing.Point(5, 27);
             this.TextBox_Id.Name = "TextBox_Id";
             this.TextBox_Id.Size = new System.Drawing.Size(237, 24);
             this.TextBox_Id.TabIndex = 0;
@@ -628,6 +616,36 @@
             this.label15.Text = "Theme";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.Clear_Button);
+            this.splitContainer1.Panel1.Controls.Add(this.TextBox_Id);
+            this.splitContainer1.Panel1.Controls.Add(this.Remove_Button);
+            this.splitContainer1.Panel1.Controls.Add(this.TextBox_FirstName);
+            this.splitContainer1.Panel1.Controls.Add(this.Edit_Button);
+            this.splitContainer1.Panel1.Controls.Add(this.TextBox_LastName);
+            this.splitContainer1.Panel1.Controls.Add(this.Add_New_Button);
+            this.splitContainer1.Panel1.Controls.Add(this.TextBox_PhoneNumber);
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.TextBox_Country);
+            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+            this.splitContainer1.Size = new System.Drawing.Size(786, 415);
+            this.splitContainer1.SplitterDistance = 261;
+            this.splitContainer1.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,13 +658,16 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -700,6 +721,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_In;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
 
