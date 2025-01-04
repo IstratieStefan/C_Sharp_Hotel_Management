@@ -46,22 +46,21 @@
             this.TextBox_FirstName = new System.Windows.Forms.TextBox();
             this.TextBox_Id = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ComboBox_RoomType = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.TextBox_RoomNumber = new System.Windows.Forms.TextBox();
-            this.ComboBox_RoomType = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker_Out = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dateTimePicker_In = new System.Windows.Forms.DateTimePicker();
+            this.ComboBox_RoomType_Reservation = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -70,12 +69,13 @@
             this.TextBox_RoomNumber_Reservation = new System.Windows.Forms.TextBox();
             this.TextBox_ClientId = new System.Windows.Forms.TextBox();
             this.TextBox_ReservationId = new System.Windows.Forms.TextBox();
-            this.ComboBox_RoomType_Reservation = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker_In = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_Out = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -285,41 +285,67 @@
             this.tabPage2.Text = "Manage Rooms";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // ComboBox_RoomType
             // 
-            this.tabPage3.Controls.Add(this.dateTimePicker_Out);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.dateTimePicker_In);
-            this.tabPage3.Controls.Add(this.ComboBox_RoomType_Reservation);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.TextBox_RoomNumber_Reservation);
-            this.tabPage3.Controls.Add(this.TextBox_ClientId);
-            this.tabPage3.Controls.Add(this.TextBox_ReservationId);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.button8);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(792, 421);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Manage Reservations";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.ComboBox_RoomType.FormattingEnabled = true;
+            this.ComboBox_RoomType.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "Apartment",
+            "Penthouse"});
+            this.ComboBox_RoomType.Location = new System.Drawing.Point(8, 75);
+            this.ComboBox_RoomType.Name = "ComboBox_RoomType";
+            this.ComboBox_RoomType.Size = new System.Drawing.Size(237, 24);
+            this.ComboBox_RoomType.TabIndex = 28;
+            this.ComboBox_RoomType.SelectedIndexChanged += new System.EventHandler(this.ComboBox_RoomType_SelectedIndexChanged);
             // 
-            // tabPage4
+            // label7
             // 
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(792, 421);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Settings";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 16);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Phone Number";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(5, 56);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Room Type";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 16);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Room Number";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(8, 124);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(237, 24);
+            this.textBox2.TabIndex = 21;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // TextBox_RoomNumber
+            // 
+            this.TextBox_RoomNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_RoomNumber.Location = new System.Drawing.Point(8, 29);
+            this.TextBox_RoomNumber.Name = "TextBox_RoomNumber";
+            this.TextBox_RoomNumber.Size = new System.Drawing.Size(237, 24);
+            this.TextBox_RoomNumber.TabIndex = 18;
+            this.TextBox_RoomNumber.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button1
             // 
@@ -373,122 +399,68 @@
             this.button4.Text = "Add New ";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // label7
+            // tabPage3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 16);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Phone Number";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.tabPage3.Controls.Add(this.dateTimePicker_Out);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.dateTimePicker_In);
+            this.tabPage3.Controls.Add(this.ComboBox_RoomType_Reservation);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.Controls.Add(this.TextBox_RoomNumber_Reservation);
+            this.tabPage3.Controls.Add(this.TextBox_ClientId);
+            this.tabPage3.Controls.Add(this.TextBox_ReservationId);
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(this.button7);
+            this.tabPage3.Controls.Add(this.button8);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(792, 421);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Manage Reservations";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // dateTimePicker_Out
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 56);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 16);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Room Type";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.dateTimePicker_Out.Location = new System.Drawing.Point(8, 250);
+            this.dateTimePicker_Out.Name = "dateTimePicker_Out";
+            this.dateTimePicker_Out.Size = new System.Drawing.Size(237, 23);
+            this.dateTimePicker_Out.TabIndex = 35;
+            this.dateTimePicker_Out.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
-            // label10
+            // label14
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 16);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Room Number";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 231);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 16);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Date Out";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
-            // textBox2
+            // dateTimePicker_In
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(8, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(237, 24);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.dateTimePicker_In.Location = new System.Drawing.Point(8, 204);
+            this.dateTimePicker_In.Name = "dateTimePicker_In";
+            this.dateTimePicker_In.Size = new System.Drawing.Size(237, 23);
+            this.dateTimePicker_In.TabIndex = 33;
             // 
-            // TextBox_RoomNumber
+            // ComboBox_RoomType_Reservation
             // 
-            this.TextBox_RoomNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_RoomNumber.Location = new System.Drawing.Point(8, 29);
-            this.TextBox_RoomNumber.Name = "TextBox_RoomNumber";
-            this.TextBox_RoomNumber.Size = new System.Drawing.Size(237, 24);
-            this.TextBox_RoomNumber.TabIndex = 18;
-            this.TextBox_RoomNumber.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // ComboBox_RoomType
-            // 
-            this.ComboBox_RoomType.FormattingEnabled = true;
-            this.ComboBox_RoomType.Items.AddRange(new object[] {
+            this.ComboBox_RoomType_Reservation.FormattingEnabled = true;
+            this.ComboBox_RoomType_Reservation.Items.AddRange(new object[] {
             "Single",
             "Double",
             "Apartment",
             "Penthouse"});
-            this.ComboBox_RoomType.Location = new System.Drawing.Point(8, 75);
-            this.ComboBox_RoomType.Name = "ComboBox_RoomType";
-            this.ComboBox_RoomType.Size = new System.Drawing.Size(237, 24);
-            this.ComboBox_RoomType.TabIndex = 28;
-            this.ComboBox_RoomType.SelectedIndexChanged += new System.EventHandler(this.ComboBox_RoomType_SelectedIndexChanged);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(8, 390);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(237, 23);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(170, 361);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Remove";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(89, 361);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Edit";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button8.Location = new System.Drawing.Point(8, 361);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "Add New ";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.ComboBox_RoomType_Reservation.Location = new System.Drawing.Point(8, 116);
+            this.ComboBox_RoomType_Reservation.Name = "ComboBox_RoomType_Reservation";
+            this.ComboBox_RoomType_Reservation.Size = new System.Drawing.Size(237, 24);
+            this.ComboBox_RoomType_Reservation.TabIndex = 32;
             // 
             // label6
             // 
@@ -567,53 +539,71 @@
             this.TextBox_ReservationId.TabIndex = 22;
             this.TextBox_ReservationId.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // ComboBox_RoomType_Reservation
+            // button5
             // 
-            this.ComboBox_RoomType_Reservation.FormattingEnabled = true;
-            this.ComboBox_RoomType_Reservation.Items.AddRange(new object[] {
-            "Single",
-            "Double",
-            "Apartment",
-            "Penthouse"});
-            this.ComboBox_RoomType_Reservation.Location = new System.Drawing.Point(8, 116);
-            this.ComboBox_RoomType_Reservation.Name = "ComboBox_RoomType_Reservation";
-            this.ComboBox_RoomType_Reservation.Size = new System.Drawing.Size(237, 24);
-            this.ComboBox_RoomType_Reservation.TabIndex = 32;
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button5.Location = new System.Drawing.Point(8, 390);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(237, 23);
+            this.button5.TabIndex = 21;
+            this.button5.Text = "Clear";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker_In
+            // button6
             // 
-            this.dateTimePicker_In.Location = new System.Drawing.Point(8, 204);
-            this.dateTimePicker_In.Name = "dateTimePicker_In";
-            this.dateTimePicker_In.Size = new System.Drawing.Size(237, 23);
-            this.dateTimePicker_In.TabIndex = 33;
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button6.Location = new System.Drawing.Point(170, 361);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 20;
+            this.button6.Text = "Remove";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // dateTimePicker_Out
+            // button7
             // 
-            this.dateTimePicker_Out.Location = new System.Drawing.Point(8, 250);
-            this.dateTimePicker_Out.Name = "dateTimePicker_Out";
-            this.dateTimePicker_Out.Size = new System.Drawing.Size(237, 23);
-            this.dateTimePicker_Out.TabIndex = 35;
-            this.dateTimePicker_Out.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Location = new System.Drawing.Point(89, 361);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "Edit";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label14
+            // button8
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(5, 231);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 16);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Date Out";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button8.Location = new System.Drawing.Point(8, 361);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 18;
+            this.button8.Text = "Add New ";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // label15
+            // tabPage4
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Theme";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(792, 421);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Settings";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -627,6 +617,16 @@
             this.comboBox1.Size = new System.Drawing.Size(108, 24);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Theme";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // Form1
             // 
