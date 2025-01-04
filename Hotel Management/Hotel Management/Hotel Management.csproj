@@ -123,10 +123,10 @@
       <DependentUpon>Tab1DB.mdf</DependentUpon>
     </Content>
     <Content Include="Tab2DB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Tab2DB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Tab2DB.mdf</DependentUpon>
     </Content>
     <None Include="Resources\Passkey.png" />

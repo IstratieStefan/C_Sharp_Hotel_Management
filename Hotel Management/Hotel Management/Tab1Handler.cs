@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hotel_Management
 {
@@ -20,6 +21,10 @@ namespace Hotel_Management
 
         public void AddData(string id, string firstName, string lastName, string phone, string country)
         {
+            if (!ValidateFields(id, firstName, lastName, phone, country))
+            {
+                return;
+            }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "INSERT INTO Clients (Id, FirstName, LastName, Phone, Country) VALUES (@Id, @FirstName, @LastName, @Phone, @Country)";
@@ -37,6 +42,10 @@ namespace Hotel_Management
 
         public void EditData(string id, string firstName, string lastName, string phone, string country)
         {
+            if (!ValidateFields(id, firstName, lastName, phone, country))
+            {
+                return;
+            }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Clients SET FirstName = @FirstName, LastName = @LastName, Phone = @Phone, Country = @Country WHERE Id = @Id";
@@ -54,6 +63,11 @@ namespace Hotel_Management
 
         public void RemoveData(string id)
         {
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                MessageBox.Show("Id cannot be null or empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "DELETE FROM Clients WHERE Id = @Id";
@@ -81,6 +95,74 @@ namespace Hotel_Management
             }
 
             return dataTable;
+        }
+        private bool ValidateFields(string id, string firstName, string lastName, string phone, string country)
+        {
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                MessageBox.Show("Id cannot be null or empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(firstName))
+            {
+                MessageBox.Show("First Name cannot be null or empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(lastName))
+            {
+                MessageBox.Show("Last Name cannot be null or empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(phone))
+            {
+                MessageBox.Show("Phone cannot be null or empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(country))
+            {
+                MessageBox.Show("Country cannot be null or empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(id, out _))
+            {
+                MessageBox.Show("Id must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(phone, out _))
+            {
+                MessageBox.Show("Phone must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!IsString(firstName))
+            {
+                MessageBox.Show("First Name must be a valid string.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!IsString(lastName))
+            {
+                MessageBox.Show("Last Name must be a valid string.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!IsString(country))
+            {
+                MessageBox.Show("Country must be a valid string.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool IsString(string value)
+        {
+            return value.All(char.IsLetter);
         }
     }
 }

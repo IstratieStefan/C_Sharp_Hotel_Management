@@ -82,9 +82,9 @@ namespace Hotel_Management
             {
                 DataGridViewRow row = dataGridViewRooms.Rows[e.RowIndex];
                 TextBox_RoomNumber.Text = row.Cells["Number"].Value.ToString();
-                TextBox_RoomType.Text = row.Cells["Type"].Value.ToString();
+                ComboBox_RoomType.SelectedItem = row.Cells["Type"].Value.ToString();
                 TextBox_RoomPhone.Text = row.Cells["Phone"].Value.ToString();
-                TextBox_RoomFree.Text = row.Cells["Free"].Value.ToString();
+                ComboBox_Free.SelectedItem = row.Cells["Free"].Value.ToString();
             }
         }
         private void button1_Click_2(object sender, EventArgs e)
@@ -462,39 +462,65 @@ namespace Hotel_Management
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int number = Convert.ToInt32(TextBox_RoomNumber.Text);
-            int type = Convert.ToInt32(TextBox_RoomType.Text);
-            string phone = TextBox_RoomPhone.Text;
-            string free = TextBox_RoomFree.Text;
+            try
+            {
+                int number = Convert.ToInt32(TextBox_RoomNumber.Text);
+                string type = ComboBox_RoomType.SelectedItem.ToString();
+                string phone = TextBox_RoomPhone.Text;
+                string free = ComboBox_Free.SelectedItem.ToString();
 
-            tab2Handler.AddRoom(number, type, phone, free);
-            LoadDataTab2();
+                tab2Handler.AddRoom(number, type, phone, free);
+                LoadDataTab2();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int number = Convert.ToInt32(TextBox_RoomNumber.Text);
-            int type = Convert.ToInt32(TextBox_RoomType.Text);
-            string phone = TextBox_RoomPhone.Text;
-            string free = TextBox_RoomFree.Text;
+            try
+            {
+                int number = Convert.ToInt32(TextBox_RoomNumber.Text);
+                string type = ComboBox_RoomType.SelectedItem.ToString();
+                string phone = TextBox_RoomPhone.Text;
+                string free = ComboBox_Free.SelectedItem.ToString();
 
-            tab2Handler.EditRoom(number, type, phone, free);
-            LoadDataTab2();
+                tab2Handler.EditRoom(number, type, phone, free);
+                LoadDataTab2();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            int number = Convert.ToInt32(TextBox_RoomNumber.Text);
-            tab2Handler.RemoveRoom(number);
-            LoadDataTab2();
+            try
+            {
+                int number = Convert.ToInt32(TextBox_RoomNumber.Text);
+                tab2Handler.RemoveRoom(number);
+                LoadDataTab2();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click_3(object sender, EventArgs e)
         {
             TextBox_RoomNumber.Text = string.Empty;
-            TextBox_RoomType.Text = string.Empty;
+            ComboBox_RoomType.SelectedIndex = -1;
             TextBox_RoomPhone.Text = string.Empty;
-            TextBox_RoomFree.Text = string.Empty;
+            ComboBox_Free.SelectedIndex = -1;
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
