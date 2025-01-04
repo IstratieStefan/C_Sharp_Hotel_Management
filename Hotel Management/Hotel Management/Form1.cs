@@ -677,5 +677,37 @@ namespace Hotel_Management
             RemoveUserForm removeUserForm = new RemoveUserForm();
             removeUserForm.ShowDialog();
         }
+
+        private void TextBox_Search2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonSearch3_Click(object sender, EventArgs e)
+        {
+            string searchTerm = TextBox_Search3.Text.ToLower();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                // Loop through rows in DataGridView to find matches
+                foreach (DataGridViewRow row in dataGridViewReservations.Rows)
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchTerm))
+                        {
+                            row.DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a search term.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

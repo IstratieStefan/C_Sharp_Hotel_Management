@@ -26,6 +26,21 @@ namespace Hotel_Management
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonAddUser_Click_1(object sender, EventArgs e)
+        {
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
 

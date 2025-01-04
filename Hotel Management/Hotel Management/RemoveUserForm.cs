@@ -58,5 +58,20 @@ namespace Hotel_Management
         {
             dataGridViewUsers.CellClick += dataGridViewUsers_CellClick;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
