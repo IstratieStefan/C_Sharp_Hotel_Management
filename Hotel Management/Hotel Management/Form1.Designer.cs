@@ -565,6 +565,7 @@
             this.dataGridViewRooms.RowTemplate.Height = 24;
             this.dataGridViewRooms.Size = new System.Drawing.Size(522, 415);
             this.dataGridViewRooms.TabIndex = 29;
+            this.dataGridViewRooms.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRooms_CellClick);
             // 
             // tabPage3
             // 
@@ -589,6 +590,7 @@
             this.dataGridViewReservations.RowTemplate.Height = 24;
             this.dataGridViewReservations.Size = new System.Drawing.Size(524, 421);
             this.dataGridViewReservations.TabIndex = 36;
+            this.dataGridViewReservations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservations_CellClick);
             // 
             // dateTimePicker_Out
             // 

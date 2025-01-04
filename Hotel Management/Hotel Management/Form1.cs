@@ -16,6 +16,7 @@ namespace Hotel_Management
         private Tab1Handler tab1Handler;
         private Tab2Handler tab2Handler;
         private Tab3Handler tab3Handler;
+
         private readonly Color lightBackColor = Color.White;
         private readonly Color lightForeColor = Color.Black;
 
@@ -641,6 +642,34 @@ namespace Hotel_Management
                     MessageBox.Show("Please enter a search term.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
         }
+
+        // Reservations search query function on button click
+        private void ButtonSearch3_Click(object sender, EventArgs e)
+        {
+            string searchTerm = TextBox_Search3.Text.ToLower();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                // Loop through rows in DataGridView to find matches
+                foreach (DataGridViewRow row in dataGridViewReservations.Rows)
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchTerm))
+                        {
+                            row.DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a search term.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         private void label18_Click(object sender, EventArgs e)
         {
 
@@ -683,31 +712,6 @@ namespace Hotel_Management
 
         }
 
-        private void ButtonSearch3_Click(object sender, EventArgs e)
-        {
-            string searchTerm = TextBox_Search3.Text.ToLower();
 
-            if (!string.IsNullOrEmpty(searchTerm))
-            {
-                // Loop through rows in DataGridView to find matches
-                foreach (DataGridViewRow row in dataGridViewReservations.Rows)
-                {
-                    row.DefaultCellStyle.BackColor = Color.White;
-
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchTerm))
-                        {
-                            row.DefaultCellStyle.BackColor = Color.LightSkyBlue;
-                            break;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a search term.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
     }
 }
