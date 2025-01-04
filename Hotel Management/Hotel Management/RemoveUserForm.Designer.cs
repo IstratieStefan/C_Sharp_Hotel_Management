@@ -42,7 +42,7 @@
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewUsers.Location = new System.Drawing.Point(0, 73);
-            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 51;
             this.dataGridViewUsers.RowTemplate.Height = 24;
@@ -66,9 +66,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(81, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.Size = new System.Drawing.Size(153, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Rremove User";
+            this.label1.Text = "Remove User";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // RemoveUserForm
@@ -79,7 +79,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewUsers);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RemoveUserForm";
             this.Text = "RemoveUserForm";
             this.Load += new System.EventHandler(this.RemoveUserForm_Load);
