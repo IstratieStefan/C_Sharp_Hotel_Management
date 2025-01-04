@@ -15,6 +15,7 @@ namespace Hotel_Management
     {
         private Tab1Handler tab1Handler;
         private Tab2Handler tab2Handler;
+        private Tab3Handler tab3Handler;
         private readonly Color lightBackColor = Color.White;
         private readonly Color lightForeColor = Color.Black;
 
@@ -26,12 +27,14 @@ namespace Hotel_Management
             InitializeComponent();
             tab1Handler = new Tab1Handler();
             tab2Handler = new Tab2Handler();
+            tab3Handler = new Tab3Handler();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadDataTab1();
             LoadDataTab2();
+            LoadDataTab3();
         }
         private void LoadDataTab1()
         {
@@ -40,6 +43,10 @@ namespace Hotel_Management
         private void LoadDataTab2()
         {
             dataGridViewRooms.DataSource = tab2Handler.GetAllRooms();
+        }
+        private void LoadDataTab3()
+        {
+            dataGridViewReservations.DataSource = tab3Handler.GetAllReservations(); 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -85,6 +92,19 @@ namespace Hotel_Management
                 ComboBox_RoomType.SelectedItem = row.Cells["Type"].Value.ToString();
                 TextBox_RoomPhone.Text = row.Cells["Phone"].Value.ToString();
                 ComboBox_Free.SelectedItem = row.Cells["Free"].Value.ToString();
+            }
+        }
+        private void dataGridViewReservations_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewReservations.Rows[e.RowIndex];
+                TextBox_ReservationId.Text = row.Cells["ReservationId"].Value.ToString();
+                TextBox_ClientId.Text = row.Cells["ClientId"].Value.ToString();
+                ComboBox_RoomType.SelectedItem = row.Cells["RoomType"].Value.ToString();
+                TextBox_RoomNumber.Text = row.Cells["RoomNumber"].Value.ToString();
+                dateTimePicker_In.Value = Convert.ToDateTime(row.Cells["DateIn"].Value);
+                dateTimePicker_Out.Value = Convert.ToDateTime(row.Cells["DateOut"].Value);
             }
         }
         private void button1_Click_2(object sender, EventArgs e)
@@ -213,17 +233,56 @@ namespace Hotel_Management
 
         private void button8_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int reservationId = Convert.ToInt32(TextBox_ReservationId.Text);
+                int clientId = Convert.ToInt32(TextBox_ClientId.Text);
+                string roomType = ComboBox_RoomType_Reservation.SelectedItem.ToString();
+                int roomNumber = Convert.ToInt32(TextBox_RoomNumber_Reservation.Text);
+                DateTime dateIn = dateTimePicker_In.Value;
+                DateTime dateOut = dateTimePicker_Out.Value;
 
+                tab3Handler.AddReservation(reservationId, clientId, roomType, roomNumber, dateIn, dateOut);
+                LoadDataTab3();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int reservationId = Convert.ToInt32(TextBox_ReservationId.Text);
+                int clientId = Convert.ToInt32(TextBox_ClientId.Text);
+                string roomType = ComboBox_RoomType_Reservation.SelectedItem.ToString();
+                int roomNumber = Convert.ToInt32(TextBox_RoomNumber_Reservation.Text);
+                DateTime dateIn = dateTimePicker_In.Value;
+                DateTime dateOut = dateTimePicker_Out.Value;
 
+                tab3Handler.EditReservation(reservationId, clientId, roomType, roomNumber, dateIn, dateOut);
+                LoadDataTab3();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int reservationId = Convert.ToInt32(TextBox_ReservationId.Text);
+                tab3Handler.RemoveReservation(reservationId);
+                LoadDataTab3();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -595,6 +654,26 @@ namespace Hotel_Management
         private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TextBox_ReservationId.Text = string.Empty;
+            TextBox_ClientId.Text = string.Empty;
+            ComboBox_RoomType_Reservation.SelectedIndex = -1;
+            TextBox_RoomNumber_Reservation.Text = string.Empty;
+            dateTimePicker_In.Value = DateTime.Now;
+            dateTimePicker_Out.Value = DateTime.Now;
+        }
+
+        private void addUser_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rmUser_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
