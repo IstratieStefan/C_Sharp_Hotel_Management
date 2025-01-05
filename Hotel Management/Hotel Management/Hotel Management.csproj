@@ -134,6 +134,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>HotelDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Logout.png" />
     <Content Include="Tab1DB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -143,10 +144,6 @@
     </Content>
     <Content Include="Tab2DB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Tab2DB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>Tab2DB.mdf</DependentUpon>
     </Content>
     <Content Include="Tab3DB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

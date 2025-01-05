@@ -67,5 +67,10 @@ namespace Hotel_Management
         {
 
         }
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 mainForm = new Form1();
+            mainForm.Show();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace Hotel_Management
     internal class Tab2Handler
     {
         private readonly string connectionString;
-        private readonly Dictionary<string, int> roomTypeMapping;
+        public Dictionary<string, int> roomTypeMapping;
 
         public Tab2Handler()
         {

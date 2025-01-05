@@ -23,6 +23,8 @@ namespace Hotel_Management
         private readonly Color darkBackColor = Color.FromArgb(30, 30, 30); // Dark gray
         private readonly Color darkForeColor = Color.White;
 
+
+        //Tab handlers initialization
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace Hotel_Management
             tab3Handler = new Tab3Handler();
         }
 
+        //LoadData functions for each tab
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadDataTab1();
@@ -55,23 +58,26 @@ namespace Hotel_Management
 
         }
 
+        //Tab1 Add
         private void button1_Click(object sender, EventArgs e)
         {
             tab1Handler.AddData(TextBox_Id.Text, TextBox_FirstName.Text, TextBox_LastName.Text, TextBox_PhoneNumber.Text, TextBox_Country.Text);
             LoadDataTab1();
         }
+        //Tab1 Edit
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             tab1Handler.EditData(TextBox_Id.Text, TextBox_FirstName.Text, TextBox_LastName.Text, TextBox_PhoneNumber.Text, TextBox_Country.Text);
             LoadDataTab1();
         }
-
+        //Tab1 Remove
         private void button2_Click(object sender, EventArgs e)
         {
             tab1Handler.RemoveData(TextBox_Id.Text);
             LoadDataTab1();
         }
+        //Tab1 DataGrid Click
         private void dataGridViewClients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -84,17 +90,22 @@ namespace Hotel_Management
                 TextBox_Country.Text = row.Cells["Country"].Value.ToString();
             }
         }
+        //Tab2 DataGrid Click
         private void dataGridViewRooms_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridViewRooms.Rows[e.RowIndex];
                 TextBox_RoomNumber.Text = row.Cells["Number"].Value.ToString();
-                ComboBox_RoomType.SelectedItem = row.Cells["Type"].Value.ToString();
+                int roomTypeId = Convert.ToInt32(row.Cells["Type"].Value);
+                string roomTypeString = tab2Handler.roomTypeMapping.FirstOrDefault(x => x.Value == roomTypeId).Key;
+                ComboBox_RoomType.SelectedItem = roomTypeString; ;
                 TextBox_RoomPhone.Text = row.Cells["Phone"].Value.ToString();
                 ComboBox_Free.SelectedItem = row.Cells["Free"].Value.ToString();
             }
         }
+
+        //Tab3 DataGrid Click
         private void dataGridViewReservations_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -102,12 +113,16 @@ namespace Hotel_Management
                 DataGridViewRow row = dataGridViewReservations.Rows[e.RowIndex];
                 TextBox_ReservationId.Text = row.Cells["ReservationId"].Value.ToString();
                 TextBox_ClientId.Text = row.Cells["ClientId"].Value.ToString();
-                ComboBox_RoomType.SelectedItem = row.Cells["RoomType"].Value.ToString();
-                TextBox_RoomNumber.Text = row.Cells["RoomNumber"].Value.ToString();
+                int roomTypeId = Convert.ToInt32(row.Cells["RoomType"].Value);
+                string roomTypeString = tab3Handler.roomTypeMapping.FirstOrDefault(x => x.Value == roomTypeId).Key;
+                ComboBox_RoomType_Reservation.SelectedItem = roomTypeString;
+                TextBox_RoomNumber_Reservation.Text = row.Cells["RoomNumber"].Value.ToString();
                 dateTimePicker_In.Value = Convert.ToDateTime(row.Cells["DateIn"].Value);
                 dateTimePicker_Out.Value = Convert.ToDateTime(row.Cells["DateOut"].Value);
             }
         }
+
+        //Tab1 Clear
         private void button1_Click_2(object sender, EventArgs e)
         {
             TextBox_Id.Text = string.Empty;
@@ -232,6 +247,7 @@ namespace Hotel_Management
 
         }
 
+        //Tab3 Add
         private void button8_Click(object sender, EventArgs e)
         {
             try
@@ -252,6 +268,7 @@ namespace Hotel_Management
             }
         }
 
+        //Tab3 Edit
         private void button7_Click(object sender, EventArgs e)
         {
             try
@@ -272,6 +289,7 @@ namespace Hotel_Management
             }
         }
 
+        //Tab3 Remove
         private void button6_Click(object sender, EventArgs e)
         {
             try
@@ -305,7 +323,7 @@ namespace Hotel_Management
         {
 
         }
-
+        //Apply theme function
         private void ApplyTheme(bool isDarkMode)
         {
             if (isDarkMode)
@@ -332,7 +350,7 @@ namespace Hotel_Management
                 ApplyLightModeToControls(this.Controls, backColor, foreColor);
             }
         }
-
+        //Apply dark mode to controls function
         private void ApplyDarkModeToControls(Control.ControlCollection controls, Color backColor, Color foreColor, Color buttonBackColor, Color buttonBorderColor)
         {
             foreach (Control control in controls)
@@ -417,7 +435,7 @@ namespace Hotel_Management
                 this.Refresh(); 
             }
         }
-
+        //Apply light mode to controls function
         private void ApplyLightModeToControls(Control.ControlCollection controls, Color backColor, Color foreColor)
         {
             foreach (Control control in controls)
@@ -519,7 +537,7 @@ namespace Hotel_Management
         {
 
         }
-
+        //Tab2 Add
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -537,7 +555,7 @@ namespace Hotel_Management
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Tab2 Edit
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -555,7 +573,7 @@ namespace Hotel_Management
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Tab2 Remove
         private void button2_Click_1(object sender, EventArgs e)
         {
             try
@@ -569,7 +587,7 @@ namespace Hotel_Management
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Tab2 Clear
         private void button1_Click_3(object sender, EventArgs e)
         {
             TextBox_RoomNumber.Text = string.Empty;
@@ -684,7 +702,7 @@ namespace Hotel_Management
         {
             
         }
-
+        //Tab3 Clear
         private void button5_Click(object sender, EventArgs e)
         {
             TextBox_ReservationId.Text = string.Empty;
@@ -694,13 +712,13 @@ namespace Hotel_Management
             dateTimePicker_In.Value = DateTime.Now;
             dateTimePicker_Out.Value = DateTime.Now;
         }
-
+        //Add user button click
         private void addUser_btn_Click(object sender, EventArgs e)
         {
             AddUserForm addUserForm = new AddUserForm();
             addUserForm.ShowDialog();
         }
-
+        //Remove user button click
         private void rmUser_btn_Click(object sender, EventArgs e)
         {
             RemoveUserForm removeUserForm = new RemoveUserForm();
@@ -711,7 +729,21 @@ namespace Hotel_Management
         {
 
         }
-
-
+        //Logout
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                Form1 newForm = new Form1();
+                newForm.FormClosed += (s, args) => this.Close(); // Close the current form when the new form is closed
+                newForm.Show();
+            }
+            else
+            {
+                this.Show(); // Show the current form again if login is canceled
+            }
+        }
     }
 }

@@ -44,7 +44,6 @@ C:\Users\tihoc\Desktop\C-ProjectV2\C_Sharp_Hotel_Management\Hotel Management\Hot
 C:\Users\istra\OneDrive\Documenti\Github\C-Project\Hotel Management\Hotel Management\bin\Debug\Tab1DB.mdf
 C:\Users\istra\OneDrive\Documenti\Github\C-Project\Hotel Management\Hotel Management\bin\Debug\Tab1DB_log.ldf
 C:\Users\istra\OneDrive\Documenti\Github\C-Project\Hotel Management\Hotel Management\bin\Debug\Tab2DB.mdf
-C:\Users\istra\OneDrive\Documenti\Github\C-Project\Hotel Management\Hotel Management\bin\Debug\Tab2DB_log.ldf
 C:\Users\tihoc\Desktop\C-Project\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab1DB.mdf
 C:\Users\tihoc\Desktop\C-Project\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab1DB_log.ldf
 C:\Users\tihoc\Desktop\C-Project\C_Sharp_Hotel_Management\Hotel Management\Hotel Management\bin\Debug\Tab2DB.mdf
