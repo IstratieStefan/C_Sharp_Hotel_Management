@@ -53,10 +53,6 @@ namespace Hotel_Management
             dataGridViewReservations.DataSource = tab3Handler.GetAllReservations(); 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //Tab1 Add
         private void button1_Click(object sender, EventArgs e)
@@ -132,120 +128,7 @@ namespace Hotel_Management
             TextBox_Country.Text = string.Empty;
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ComboBox_RoomType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+   
 
         //Tab3 Add
         private void button8_Click(object sender, EventArgs e)
@@ -304,25 +187,6 @@ namespace Hotel_Management
             }
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
         //Apply theme function
         private void ApplyTheme(bool isDarkMode)
         {
@@ -522,21 +386,7 @@ namespace Hotel_Management
             }
         }
 
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker_In_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox_Id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         //Tab2 Add
         private void button4_Click(object sender, EventArgs e)
         {
@@ -596,16 +446,7 @@ namespace Hotel_Management
             ComboBox_Free.SelectedIndex = -1;
         }
 
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         // Clients search query function on button click
         private void Search_clients_Click(object sender, EventArgs e)
         {
@@ -688,20 +529,8 @@ namespace Hotel_Management
                 MessageBox.Show("Please enter a search term.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void label18_Click(object sender, EventArgs e)
-        {
+ 
 
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
         //Tab3 Clear
         private void button5_Click(object sender, EventArgs e)
         {
@@ -725,10 +554,6 @@ namespace Hotel_Management
             removeUserForm.ShowDialog();
         }
 
-        private void TextBox_Search2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         //Logout
         private void pictureBox1_Click(object sender, EventArgs e)
         {

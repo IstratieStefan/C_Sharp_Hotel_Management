@@ -133,7 +133,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 450);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -145,7 +144,7 @@
             this.tabPage1.Size = new System.Drawing.Size(792, 421);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Manage Clients";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            
             // 
             // splitContainer1
             // 
@@ -175,7 +174,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.buttonSearch);
             this.splitContainer1.Panel2.Controls.Add(this.TextBox_Search);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewClients);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(786, 415);
             this.splitContainer1.SplitterDistance = 258;
             this.splitContainer1.TabIndex = 14;
@@ -201,7 +199,7 @@
             this.TextBox_Id.Name = "TextBox_Id";
             this.TextBox_Id.Size = new System.Drawing.Size(237, 24);
             this.TextBox_Id.TabIndex = 0;
-            this.TextBox_Id.TextChanged += new System.EventHandler(this.TextBox_Id_TextChanged);
+         
             // 
             // Remove_Button
             // 
@@ -300,7 +298,7 @@
             this.label1.Size = new System.Drawing.Size(17, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Id";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+           
             // 
             // label3
             // 
@@ -353,7 +351,7 @@
             this.dataGridViewClients.Size = new System.Drawing.Size(524, 415);
             this.dataGridViewClients.TabIndex = 0;
             this.dataGridViewClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellClick);
-            this.dataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellContentClick);
+            
             // 
             // tabPage2
             // 
@@ -386,7 +384,7 @@
             this.splitContainer2.Panel1.Controls.Add(this.button2);
             this.splitContainer2.Panel1.Controls.Add(this.TextBox_RoomNumber);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
-            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel1_Paint);
+            
             // 
             // splitContainer2.Panel2
             // 
@@ -422,7 +420,7 @@
             this.ComboBox_RoomType.Name = "ComboBox_RoomType";
             this.ComboBox_RoomType.Size = new System.Drawing.Size(234, 24);
             this.ComboBox_RoomType.TabIndex = 33;
-            this.ComboBox_RoomType.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+           
             // 
             // label16
             // 
@@ -441,7 +439,7 @@
             this.label7.Size = new System.Drawing.Size(88, 16);
             this.label7.TabIndex = 26;
             this.label7.Text = "Phone Number";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            
             // 
             // label9
             // 
@@ -451,7 +449,7 @@
             this.label9.Size = new System.Drawing.Size(68, 16);
             this.label9.TabIndex = 24;
             this.label9.Text = "Room Type";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+           
             // 
             // button3
             // 
@@ -475,7 +473,7 @@
             this.label10.Size = new System.Drawing.Size(86, 16);
             this.label10.TabIndex = 23;
             this.label10.Text = "Room Number";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            
             // 
             // button4
             // 
@@ -498,7 +496,7 @@
             this.TextBox_RoomPhone.Name = "TextBox_RoomPhone";
             this.TextBox_RoomPhone.Size = new System.Drawing.Size(237, 24);
             this.TextBox_RoomPhone.TabIndex = 21;
-            this.TextBox_RoomPhone.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+           
             // 
             // button2
             // 
@@ -521,7 +519,7 @@
             this.TextBox_RoomNumber.Name = "TextBox_RoomNumber";
             this.TextBox_RoomNumber.Size = new System.Drawing.Size(237, 24);
             this.TextBox_RoomNumber.TabIndex = 18;
-            this.TextBox_RoomNumber.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+           
             // 
             // button1
             // 
@@ -556,7 +554,7 @@
             this.TextBox_Search2.Size = new System.Drawing.Size(522, 23);
             this.TextBox_Search2.TabIndex = 30;
             this.TextBox_Search2.Text = "Search...";
-            this.TextBox_Search2.TextChanged += new System.EventHandler(this.TextBox_Search2_TextChanged);
+            
             // 
             // dataGridViewRooms
             // 
@@ -624,7 +622,7 @@
             this.label13.Size = new System.Drawing.Size(81, 16);
             this.label13.TabIndex = 27;
             this.label13.Text = "Reservation Id";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            
             // 
             // dateTimePicker_Out
             // 
@@ -632,7 +630,7 @@
             this.dateTimePicker_Out.Name = "dateTimePicker_Out";
             this.dateTimePicker_Out.Size = new System.Drawing.Size(237, 23);
             this.dateTimePicker_Out.TabIndex = 35;
-            this.dateTimePicker_Out.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+          
             // 
             // TextBox_ReservationId
             // 
@@ -641,7 +639,7 @@
             this.TextBox_ReservationId.Name = "TextBox_ReservationId";
             this.TextBox_ReservationId.Size = new System.Drawing.Size(237, 24);
             this.TextBox_ReservationId.TabIndex = 22;
-            this.TextBox_ReservationId.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            
             // 
             // label14
             // 
@@ -651,7 +649,6 @@
             this.label14.Size = new System.Drawing.Size(54, 16);
             this.label14.TabIndex = 34;
             this.label14.Text = "Date Out";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // button8
             // 
@@ -673,7 +670,6 @@
             this.dateTimePicker_In.Name = "dateTimePicker_In";
             this.dateTimePicker_In.Size = new System.Drawing.Size(237, 23);
             this.dateTimePicker_In.TabIndex = 33;
-            this.dateTimePicker_In.ValueChanged += new System.EventHandler(this.dateTimePicker_In_ValueChanged);
             // 
             // button7
             // 
@@ -724,7 +720,7 @@
             this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 31;
             this.label6.Text = "Date In";
-            this.label6.Click += new System.EventHandler(this.label6_Click_1);
+        
             // 
             // button5
             // 
@@ -748,7 +744,7 @@
             this.label8.Size = new System.Drawing.Size(86, 16);
             this.label8.TabIndex = 30;
             this.label8.Text = "Room Number";
-            this.label8.Click += new System.EventHandler(this.label8_Click_1);
+           
             // 
             // TextBox_ClientId
             // 
@@ -757,7 +753,7 @@
             this.TextBox_ClientId.Name = "TextBox_ClientId";
             this.TextBox_ClientId.Size = new System.Drawing.Size(237, 24);
             this.TextBox_ClientId.TabIndex = 23;
-            this.TextBox_ClientId.TextChanged += new System.EventHandler(this.textBox5_TextChanged_1);
+           
             // 
             // label11
             // 
@@ -767,7 +763,7 @@
             this.label11.Size = new System.Drawing.Size(68, 16);
             this.label11.TabIndex = 29;
             this.label11.Text = "Room Type";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            
             // 
             // TextBox_RoomNumber_Reservation
             // 
@@ -776,7 +772,7 @@
             this.TextBox_RoomNumber_Reservation.Name = "TextBox_RoomNumber_Reservation";
             this.TextBox_RoomNumber_Reservation.Size = new System.Drawing.Size(237, 24);
             this.TextBox_RoomNumber_Reservation.TabIndex = 25;
-            this.TextBox_RoomNumber_Reservation.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
+            
             // 
             // label12
             // 
@@ -786,7 +782,7 @@
             this.label12.Size = new System.Drawing.Size(51, 16);
             this.label12.TabIndex = 28;
             this.label12.Text = "Client Id";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+          
             // 
             // ButtonSearch3
             // 
@@ -900,7 +896,7 @@
             this.label15.Size = new System.Drawing.Size(44, 16);
             this.label15.TabIndex = 0;
             this.label15.Text = "Theme";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+     
             // 
             // label18
             // 
