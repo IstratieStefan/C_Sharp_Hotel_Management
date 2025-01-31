@@ -570,5 +570,95 @@ namespace Hotel_Management
                 this.Show(); // Show the current form again if login is canceled
             }
         }
+
+        private void TextBox_Id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_FirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_LastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_PhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_Country_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox_RoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_RoomPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_Free_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_ReservationId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_RoomNumber_Reservation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
