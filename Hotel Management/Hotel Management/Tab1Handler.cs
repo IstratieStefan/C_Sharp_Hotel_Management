@@ -25,6 +25,13 @@ namespace Hotel_Management
             {
                 return;
             }
+
+            if (CheckIfIdExists(id))
+            {
+                MessageBox.Show("An entry with the same Id already exists.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "INSERT INTO Clients (Id, FirstName, LastName, Phone, Country) VALUES (@Id, @FirstName, @LastName, @Phone, @Country)";
@@ -163,6 +170,21 @@ namespace Hotel_Management
         private bool IsString(string value)
         {
             return value.All(char.IsLetter);
+        }
+
+        private bool CheckIfIdExists(string id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Clients WHERE Id = @Id";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Id", id);
+
+                connection.Open();
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                return count > 0;
+            }
         }
     }
 }

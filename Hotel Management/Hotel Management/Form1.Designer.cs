@@ -202,9 +202,9 @@
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.splitContainer1);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1059, 522);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Manage Clients";
@@ -213,7 +213,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(4, 4);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -244,7 +244,7 @@
             this.panel28.Controls.Add(this.panel32);
             this.panel28.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel28.Location = new System.Drawing.Point(0, 440);
-            this.panel28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel28.Margin = new System.Windows.Forms.Padding(4);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(344, 74);
             this.panel28.TabIndex = 33;
@@ -254,7 +254,7 @@
             this.panel29.Controls.Add(this.Edit_Button);
             this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel29.Location = new System.Drawing.Point(115, 0);
-            this.panel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel29.Margin = new System.Windows.Forms.Padding(4);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(114, 40);
             this.panel29.TabIndex = 16;
@@ -266,7 +266,7 @@
             this.Edit_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Edit_Button.Location = new System.Drawing.Point(0, 0);
-            this.Edit_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Edit_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Edit_Button.Name = "Edit_Button";
             this.Edit_Button.Size = new System.Drawing.Size(114, 40);
             this.Edit_Button.TabIndex = 11;
@@ -279,7 +279,7 @@
             this.panel30.Controls.Add(this.Remove_Button);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel30.Location = new System.Drawing.Point(229, 0);
-            this.panel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(115, 40);
             this.panel30.TabIndex = 2;
@@ -291,7 +291,7 @@
             this.Remove_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Remove_Button.Location = new System.Drawing.Point(0, 0);
-            this.Remove_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Remove_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Remove_Button.Name = "Remove_Button";
             this.Remove_Button.Size = new System.Drawing.Size(115, 40);
             this.Remove_Button.TabIndex = 12;
@@ -304,7 +304,7 @@
             this.panel31.Controls.Add(this.Add_New_Button);
             this.panel31.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel31.Location = new System.Drawing.Point(0, 0);
-            this.panel31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel31.Margin = new System.Windows.Forms.Padding(4);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(115, 40);
             this.panel31.TabIndex = 1;
@@ -316,7 +316,7 @@
             this.Add_New_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_New_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Add_New_Button.Location = new System.Drawing.Point(0, 0);
-            this.Add_New_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Add_New_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Add_New_Button.Name = "Add_New_Button";
             this.Add_New_Button.Size = new System.Drawing.Size(115, 40);
             this.Add_New_Button.TabIndex = 10;
@@ -329,7 +329,7 @@
             this.panel32.Controls.Add(this.Clear_Button);
             this.panel32.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel32.Location = new System.Drawing.Point(0, 40);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(344, 34);
             this.panel32.TabIndex = 0;
@@ -342,7 +342,7 @@
             this.Clear_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clear_Button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Clear_Button.Location = new System.Drawing.Point(0, 0);
-            this.Clear_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Clear_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(344, 34);
             this.Clear_Button.TabIndex = 13;
@@ -356,7 +356,7 @@
             this.panel6.Controls.Add(this.TextBox_Country);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 224);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(344, 50);
             this.panel6.TabIndex = 19;
@@ -377,11 +377,11 @@
             this.TextBox_Country.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_Country.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_Country.Location = new System.Drawing.Point(0, 22);
-            this.TextBox_Country.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_Country.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Country.Name = "TextBox_Country";
             this.TextBox_Country.Size = new System.Drawing.Size(344, 28);
             this.TextBox_Country.TabIndex = 4;
-            this.TextBox_Country.TextChanged += new System.EventHandler(this.TextBox_Country_TextChanged);
+            
             // 
             // panel5
             // 
@@ -389,7 +389,7 @@
             this.panel5.Controls.Add(this.TextBox_PhoneNumber);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 172);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(344, 52);
             this.panel5.TabIndex = 18;
@@ -410,11 +410,11 @@
             this.TextBox_PhoneNumber.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_PhoneNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_PhoneNumber.Location = new System.Drawing.Point(0, 24);
-            this.TextBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_PhoneNumber.Name = "TextBox_PhoneNumber";
             this.TextBox_PhoneNumber.Size = new System.Drawing.Size(344, 28);
             this.TextBox_PhoneNumber.TabIndex = 3;
-            this.TextBox_PhoneNumber.TextChanged += new System.EventHandler(this.TextBox_PhoneNumber_TextChanged);
+            
             // 
             // panel4
             // 
@@ -422,7 +422,7 @@
             this.panel4.Controls.Add(this.TextBox_LastName);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 115);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(344, 57);
             this.panel4.TabIndex = 17;
@@ -443,11 +443,11 @@
             this.TextBox_LastName.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_LastName.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_LastName.Location = new System.Drawing.Point(0, 29);
-            this.TextBox_LastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_LastName.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_LastName.Name = "TextBox_LastName";
             this.TextBox_LastName.Size = new System.Drawing.Size(344, 28);
             this.TextBox_LastName.TabIndex = 2;
-            this.TextBox_LastName.TextChanged += new System.EventHandler(this.TextBox_LastName_TextChanged);
+            
             // 
             // panel3
             // 
@@ -455,7 +455,7 @@
             this.panel3.Controls.Add(this.TextBox_FirstName);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 63);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(344, 52);
             this.panel3.TabIndex = 16;
@@ -470,25 +470,25 @@
             this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "First Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // TextBox_FirstName
             // 
             this.TextBox_FirstName.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_FirstName.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_FirstName.Location = new System.Drawing.Point(0, 24);
-            this.TextBox_FirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_FirstName.Name = "TextBox_FirstName";
             this.TextBox_FirstName.Size = new System.Drawing.Size(344, 28);
             this.TextBox_FirstName.TabIndex = 1;
-            this.TextBox_FirstName.TextChanged += new System.EventHandler(this.TextBox_FirstName_TextChanged);
+            
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.TextBox_Id);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(344, 33);
             this.panel2.TabIndex = 15;
@@ -499,18 +499,18 @@
             this.TextBox_Id.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TextBox_Id.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_Id.Location = new System.Drawing.Point(0, 0);
-            this.TextBox_Id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_Id.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Id.Name = "TextBox_Id";
             this.TextBox_Id.Size = new System.Drawing.Size(344, 28);
             this.TextBox_Id.TabIndex = 0;
-            this.TextBox_Id.TextChanged += new System.EventHandler(this.TextBox_Id_TextChanged);
+            
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(344, 30);
             this.panel1.TabIndex = 14;
@@ -529,8 +529,8 @@
             // buttonSearch
             // 
             this.buttonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearch.Location = new System.Drawing.Point(600, 484);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSearch.Location = new System.Drawing.Point(599, 484);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(100, 28);
             this.buttonSearch.TabIndex = 16;
@@ -542,7 +542,7 @@
             // 
             this.TextBox_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_Search.Location = new System.Drawing.Point(0, 487);
-            this.TextBox_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_Search.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Search.Name = "TextBox_Search";
             this.TextBox_Search.Size = new System.Drawing.Size(702, 27);
             this.TextBox_Search.TabIndex = 15;
@@ -566,9 +566,9 @@
             // 
             this.tabPage2.Controls.Add(this.splitContainer2);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1059, 522);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manage Rooms";
@@ -578,7 +578,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(4, 4);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -588,7 +588,7 @@
             this.splitContainer2.Panel1.Controls.Add(this.panel10);
             this.splitContainer2.Panel1.Controls.Add(this.panel9);
             this.splitContainer2.Panel1.Controls.Add(this.panel8);
-            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel1_Paint);
+            
             // 
             // splitContainer2.Panel2
             // 
@@ -608,7 +608,7 @@
             this.panel18.Controls.Add(this.panel19);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel18.Location = new System.Drawing.Point(0, 440);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(347, 74);
             this.panel18.TabIndex = 32;
@@ -618,7 +618,7 @@
             this.panel22.Controls.Add(this.button3);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(115, 0);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(117, 40);
             this.panel22.TabIndex = 16;
@@ -630,7 +630,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(117, 40);
             this.button3.TabIndex = 15;
@@ -643,7 +643,7 @@
             this.panel21.Controls.Add(this.button2);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel21.Location = new System.Drawing.Point(232, 0);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(115, 40);
             this.panel21.TabIndex = 2;
@@ -655,7 +655,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 40);
             this.button2.TabIndex = 16;
@@ -668,7 +668,7 @@
             this.panel20.Controls.Add(this.button4);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(115, 40);
             this.panel20.TabIndex = 1;
@@ -680,7 +680,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 40);
             this.button4.TabIndex = 14;
@@ -693,7 +693,7 @@
             this.panel19.Controls.Add(this.button1);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel19.Location = new System.Drawing.Point(0, 40);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(347, 34);
             this.panel19.TabIndex = 0;
@@ -705,7 +705,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(347, 34);
             this.button1.TabIndex = 17;
@@ -719,7 +719,7 @@
             this.panel11.Controls.Add(this.label16);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 150);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(347, 49);
             this.panel11.TabIndex = 38;
@@ -736,7 +736,7 @@
             this.ComboBox_Free.Name = "ComboBox_Free";
             this.ComboBox_Free.Size = new System.Drawing.Size(347, 27);
             this.ComboBox_Free.TabIndex = 34;
-            this.ComboBox_Free.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Free_SelectedIndexChanged);
+            
             // 
             // label16
             // 
@@ -748,7 +748,7 @@
             this.label16.Size = new System.Drawing.Size(37, 19);
             this.label16.TabIndex = 31;
             this.label16.Text = "Free";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            
             // 
             // panel10
             // 
@@ -756,7 +756,7 @@
             this.panel10.Controls.Add(this.TextBox_RoomPhone);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 98);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(347, 52);
             this.panel10.TabIndex = 37;
@@ -771,18 +771,18 @@
             this.label7.Size = new System.Drawing.Size(108, 19);
             this.label7.TabIndex = 26;
             this.label7.Text = "Phone Number";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            
             // 
             // TextBox_RoomPhone
             // 
             this.TextBox_RoomPhone.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_RoomPhone.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_RoomPhone.Location = new System.Drawing.Point(0, 24);
-            this.TextBox_RoomPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_RoomPhone.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_RoomPhone.Name = "TextBox_RoomPhone";
             this.TextBox_RoomPhone.Size = new System.Drawing.Size(347, 28);
             this.TextBox_RoomPhone.TabIndex = 21;
-            this.TextBox_RoomPhone.TextChanged += new System.EventHandler(this.TextBox_RoomPhone_TextChanged);
+            
             // 
             // panel9
             // 
@@ -790,7 +790,7 @@
             this.panel9.Controls.Add(this.label9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 46);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(347, 52);
             this.panel9.TabIndex = 36;
@@ -809,7 +809,7 @@
             this.ComboBox_RoomType.Name = "ComboBox_RoomType";
             this.ComboBox_RoomType.Size = new System.Drawing.Size(347, 27);
             this.ComboBox_RoomType.TabIndex = 33;
-            this.ComboBox_RoomType.SelectedIndexChanged += new System.EventHandler(this.ComboBox_RoomType_SelectedIndexChanged);
+            
             // 
             // label9
             // 
@@ -821,7 +821,7 @@
             this.label9.Size = new System.Drawing.Size(85, 19);
             this.label9.TabIndex = 24;
             this.label9.Text = "Room Type";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            
             // 
             // panel8
             // 
@@ -829,7 +829,7 @@
             this.panel8.Controls.Add(this.TextBox_RoomNumber);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(347, 46);
             this.panel8.TabIndex = 35;
@@ -850,7 +850,7 @@
             this.TextBox_RoomNumber.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_RoomNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_RoomNumber.Location = new System.Drawing.Point(0, 18);
-            this.TextBox_RoomNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_RoomNumber.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_RoomNumber.Name = "TextBox_RoomNumber";
             this.TextBox_RoomNumber.Size = new System.Drawing.Size(347, 28);
             this.TextBox_RoomNumber.TabIndex = 18;
@@ -858,8 +858,8 @@
             // ButtonSearch2
             // 
             this.ButtonSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonSearch2.Location = new System.Drawing.Point(598, 484);
-            this.ButtonSearch2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonSearch2.Location = new System.Drawing.Point(597, 484);
+            this.ButtonSearch2.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonSearch2.Name = "ButtonSearch2";
             this.ButtonSearch2.Size = new System.Drawing.Size(100, 28);
             this.ButtonSearch2.TabIndex = 31;
@@ -871,7 +871,7 @@
             // 
             this.TextBox_Search2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_Search2.Location = new System.Drawing.Point(0, 487);
-            this.TextBox_Search2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_Search2.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Search2.Name = "TextBox_Search2";
             this.TextBox_Search2.Size = new System.Drawing.Size(699, 27);
             this.TextBox_Search2.TabIndex = 30;
@@ -895,7 +895,7 @@
             // 
             this.tabPage3.Controls.Add(this.splitContainer3);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1059, 522);
             this.tabPage3.TabIndex = 2;
@@ -906,7 +906,7 @@
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer3.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer3.Name = "splitContainer3";
             // 
             // splitContainer3.Panel1
@@ -937,7 +937,7 @@
             this.panel23.Controls.Add(this.panel27);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel23.Location = new System.Drawing.Point(0, 456);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(353, 66);
             this.panel23.TabIndex = 39;
@@ -947,7 +947,7 @@
             this.panel24.Controls.Add(this.button7);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(115, 0);
-            this.panel24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel24.Margin = new System.Windows.Forms.Padding(4);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(123, 32);
             this.panel24.TabIndex = 16;
@@ -959,7 +959,7 @@
             this.button7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(123, 32);
             this.button7.TabIndex = 19;
@@ -972,7 +972,7 @@
             this.panel25.Controls.Add(this.button6);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel25.Location = new System.Drawing.Point(238, 0);
-            this.panel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel25.Margin = new System.Windows.Forms.Padding(4);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(115, 32);
             this.panel25.TabIndex = 2;
@@ -984,7 +984,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(115, 32);
             this.button6.TabIndex = 20;
@@ -997,7 +997,7 @@
             this.panel26.Controls.Add(this.button8);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel26.Location = new System.Drawing.Point(0, 0);
-            this.panel26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(115, 32);
             this.panel26.TabIndex = 1;
@@ -1009,7 +1009,7 @@
             this.button8.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(115, 32);
             this.button8.TabIndex = 18;
@@ -1022,7 +1022,7 @@
             this.panel27.Controls.Add(this.button5);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel27.Location = new System.Drawing.Point(0, 32);
-            this.panel27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel27.Margin = new System.Windows.Forms.Padding(4);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(353, 34);
             this.panel27.TabIndex = 0;
@@ -1034,7 +1034,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(353, 34);
             this.button5.TabIndex = 21;
@@ -1048,7 +1048,7 @@
             this.panel17.Controls.Add(this.label14);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 257);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(353, 49);
             this.panel17.TabIndex = 41;
@@ -1057,7 +1057,7 @@
             // 
             this.dateTimePicker_Out.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dateTimePicker_Out.Location = new System.Drawing.Point(0, 22);
-            this.dateTimePicker_Out.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker_Out.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_Out.Name = "dateTimePicker_Out";
             this.dateTimePicker_Out.Size = new System.Drawing.Size(353, 27);
             this.dateTimePicker_Out.TabIndex = 35;
@@ -1079,7 +1079,7 @@
             this.panel16.Controls.Add(this.dateTimePicker_In);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(0, 205);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(353, 52);
             this.panel16.TabIndex = 40;
@@ -1099,7 +1099,7 @@
             // 
             this.dateTimePicker_In.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dateTimePicker_In.Location = new System.Drawing.Point(0, 25);
-            this.dateTimePicker_In.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker_In.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_In.Name = "dateTimePicker_In";
             this.dateTimePicker_In.Size = new System.Drawing.Size(353, 27);
             this.dateTimePicker_In.TabIndex = 33;
@@ -1110,7 +1110,7 @@
             this.panel15.Controls.Add(this.label8);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 153);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(353, 52);
             this.panel15.TabIndex = 39;
@@ -1120,11 +1120,11 @@
             this.TextBox_RoomNumber_Reservation.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_RoomNumber_Reservation.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_RoomNumber_Reservation.Location = new System.Drawing.Point(0, 24);
-            this.TextBox_RoomNumber_Reservation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_RoomNumber_Reservation.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_RoomNumber_Reservation.Name = "TextBox_RoomNumber_Reservation";
             this.TextBox_RoomNumber_Reservation.Size = new System.Drawing.Size(353, 28);
             this.TextBox_RoomNumber_Reservation.TabIndex = 25;
-            this.TextBox_RoomNumber_Reservation.TextChanged += new System.EventHandler(this.TextBox_RoomNumber_Reservation_TextChanged);
+            
             // 
             // label8
             // 
@@ -1136,7 +1136,7 @@
             this.label8.Size = new System.Drawing.Size(107, 19);
             this.label8.TabIndex = 30;
             this.label8.Text = "Room Number";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            
             // 
             // panel14
             // 
@@ -1144,7 +1144,7 @@
             this.panel14.Controls.Add(this.ComboBox_RoomType_Reservation);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 100);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(353, 53);
             this.panel14.TabIndex = 38;
@@ -1170,7 +1170,7 @@
             "3-Apartment",
             "4-Suite"});
             this.ComboBox_RoomType_Reservation.Location = new System.Drawing.Point(0, 26);
-            this.ComboBox_RoomType_Reservation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboBox_RoomType_Reservation.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBox_RoomType_Reservation.Name = "ComboBox_RoomType_Reservation";
             this.ComboBox_RoomType_Reservation.Size = new System.Drawing.Size(353, 27);
             this.ComboBox_RoomType_Reservation.TabIndex = 32;
@@ -1181,7 +1181,7 @@
             this.panel13.Controls.Add(this.label12);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 50);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(353, 50);
             this.panel13.TabIndex = 37;
@@ -1191,7 +1191,7 @@
             this.TextBox_ClientId.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_ClientId.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_ClientId.Location = new System.Drawing.Point(0, 22);
-            this.TextBox_ClientId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_ClientId.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_ClientId.Name = "TextBox_ClientId";
             this.TextBox_ClientId.Size = new System.Drawing.Size(353, 28);
             this.TextBox_ClientId.TabIndex = 23;
@@ -1213,7 +1213,7 @@
             this.panel12.Controls.Add(this.TextBox_ReservationId);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(353, 50);
             this.panel12.TabIndex = 36;
@@ -1228,24 +1228,24 @@
             this.label13.Size = new System.Drawing.Size(103, 19);
             this.label13.TabIndex = 27;
             this.label13.Text = "Reservation Id";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            
             // 
             // TextBox_ReservationId
             // 
             this.TextBox_ReservationId.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_ReservationId.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_ReservationId.Location = new System.Drawing.Point(0, 22);
-            this.TextBox_ReservationId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_ReservationId.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_ReservationId.Name = "TextBox_ReservationId";
             this.TextBox_ReservationId.Size = new System.Drawing.Size(353, 28);
             this.TextBox_ReservationId.TabIndex = 22;
-            this.TextBox_ReservationId.TextChanged += new System.EventHandler(this.TextBox_ReservationId_TextChanged);
+            
             // 
             // ButtonSearch3
             // 
             this.ButtonSearch3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonSearch3.Location = new System.Drawing.Point(601, 494);
-            this.ButtonSearch3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonSearch3.Location = new System.Drawing.Point(600, 494);
+            this.ButtonSearch3.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonSearch3.Name = "ButtonSearch3";
             this.ButtonSearch3.Size = new System.Drawing.Size(100, 28);
             this.ButtonSearch3.TabIndex = 38;
@@ -1257,7 +1257,7 @@
             // 
             this.TextBox_Search3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TextBox_Search3.Location = new System.Drawing.Point(0, 495);
-            this.TextBox_Search3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_Search3.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Search3.Name = "TextBox_Search3";
             this.TextBox_Search3.Size = new System.Drawing.Size(701, 27);
             this.TextBox_Search3.TabIndex = 37;
@@ -1289,7 +1289,7 @@
             this.tabPage4.Controls.Add(this.comboBox_Theme);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1059, 522);
             this.tabPage4.TabIndex = 3;
@@ -1310,7 +1310,7 @@
             // 
             this.pictureBox1.Image = global::Hotel_Management.Properties.Resources.Logout;
             this.pictureBox1.Location = new System.Drawing.Point(83, 114);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1321,7 +1321,7 @@
             // rmUser_btn
             // 
             this.rmUser_btn.Location = new System.Drawing.Point(191, 79);
-            this.rmUser_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rmUser_btn.Margin = new System.Windows.Forms.Padding(4);
             this.rmUser_btn.Name = "rmUser_btn";
             this.rmUser_btn.Size = new System.Drawing.Size(119, 28);
             this.rmUser_btn.TabIndex = 6;
@@ -1332,7 +1332,7 @@
             // addUser_btn
             // 
             this.addUser_btn.Location = new System.Drawing.Point(83, 79);
-            this.addUser_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addUser_btn.Margin = new System.Windows.Forms.Padding(4);
             this.addUser_btn.Name = "addUser_btn";
             this.addUser_btn.Size = new System.Drawing.Size(100, 28);
             this.addUser_btn.TabIndex = 3;
@@ -1349,7 +1349,7 @@
             this.label17.Size = new System.Drawing.Size(44, 19);
             this.label17.TabIndex = 2;
             this.label17.Text = "Users";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
+            
             // 
             // comboBox_Theme
             // 
@@ -1358,7 +1358,7 @@
             "Light Mode",
             "Dark Mode"});
             this.comboBox_Theme.Location = new System.Drawing.Point(83, 42);
-            this.comboBox_Theme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_Theme.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_Theme.Name = "comboBox_Theme";
             this.comboBox_Theme.Size = new System.Drawing.Size(143, 27);
             this.comboBox_Theme.TabIndex = 1;
@@ -1381,7 +1381,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Hotel Management";
             this.Load += new System.EventHandler(this.Form1_Load);

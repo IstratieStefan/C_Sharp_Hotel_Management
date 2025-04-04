@@ -38,6 +38,12 @@ namespace Hotel_Management
                     throw new ArgumentException("Invalid room type");
                 }
 
+                if (CheckIfNumberExists(Number))
+                {
+                    MessageBox.Show("A room with the same number already exists.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "INSERT INTO Rooms (Number, Type, Phone, Free) VALUES (@Number, @Type, @Phone, @Free)";
@@ -113,6 +119,7 @@ namespace Hotel_Management
 
             return dataTable;
         }
+
         private bool ValidateFields(int Number, string Type, string Phone, string Free)
         {
             if (Number <= 0)
@@ -147,5 +154,19 @@ namespace Hotel_Management
             return value.All(char.IsDigit);
         }
 
+        private bool CheckIfNumberExists(int Number)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Rooms WHERE Number = @Number";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Number", Number);
+
+                connection.Open();
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                return count > 0;
+            }
+        }
     }
 }

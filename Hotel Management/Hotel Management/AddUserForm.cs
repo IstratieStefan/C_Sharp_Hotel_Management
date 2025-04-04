@@ -26,7 +26,7 @@ namespace Hotel_Management
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
@@ -46,9 +46,12 @@ namespace Hotel_Management
 
             try
             {
-                userHandler.AddUser(username, password);
-                MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close(); // Close the form after adding the user
+                bool userAdded = userHandler.AddUser(username, password);
+                if (userAdded)
+                {
+                    MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close(); // Close the form after adding the user
+                }
             }
             catch (Exception ex)
             {

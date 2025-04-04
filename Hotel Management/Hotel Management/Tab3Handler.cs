@@ -38,6 +38,18 @@ namespace Hotel_Management
                     throw new ArgumentException("Invalid room type");
                 }
 
+                if (CheckIfReservationIdExists(reservationId))
+                {
+                    MessageBox.Show("A reservation with the same ID already exists.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (CheckIfRoomNumberExists(roomNumber, dateIn, dateOut))
+                {
+                    MessageBox.Show("The room is already reserved for the selected dates.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "INSERT INTO Reservations (ReservationId, ClientId, RoomType, RoomNumber, DateIn, DateOut) VALUES (@ReservationId, @ClientId, @RoomType, @RoomNumber, @DateIn, @DateOut)";
@@ -62,6 +74,12 @@ namespace Hotel_Management
                 if (!roomTypeMapping.TryGetValue(roomType, out int typeValue))
                 {
                     throw new ArgumentException("Invalid room type");
+                }
+
+                if (CheckIfRoomNumberExists(roomNumber, dateIn, dateOut, reservationId))
+                {
+                    MessageBox.Show("The room is already reserved for the selected dates.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -151,6 +169,47 @@ namespace Hotel_Management
             }
 
             return true;
+        }
+
+        private bool CheckIfReservationIdExists(int reservationId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Reservations WHERE ReservationId = @ReservationId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ReservationId", reservationId);
+
+                connection.Open();
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                return count > 0;
+            }
+        }
+
+        private bool CheckIfRoomNumberExists(int roomNumber, DateTime dateIn, DateTime dateOut, int? reservationId = null)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Reservations WHERE RoomNumber = @RoomNumber AND ((DateIn < @DateOut AND DateOut > @DateIn) OR (DateIn = @DateIn AND DateOut = @DateOut))";
+                if (reservationId.HasValue)
+                {
+                    query += " AND ReservationId != @ReservationId";
+                }
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@RoomNumber", roomNumber);
+                command.Parameters.AddWithValue("@DateIn", dateIn);
+                command.Parameters.AddWithValue("@DateOut", dateOut);
+                if (reservationId.HasValue)
+                {
+                    command.Parameters.AddWithValue("@ReservationId", reservationId.Value);
+                }
+
+                connection.Open();
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                return count > 0;
+            }
         }
     }
 }

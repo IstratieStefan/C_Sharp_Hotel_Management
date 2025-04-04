@@ -20,10 +20,16 @@ namespace Hotel_Management
         }
         public string ConnectionString => connectionString;
 
-        public void AddUser(string username, string password)
+        public bool AddUser(string username, string password)
         {
             if (ValidateFields(username, password))
             {
+                if (CheckIfUsernameExists(username))
+                {
+                    MessageBox.Show("A user with the same username already exists.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
                 string hashedPassword = ComputeSha256Hash(password);
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -36,7 +42,9 @@ namespace Hotel_Management
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
+                return true;
             }
+            return false;
         }
 
         public void RemoveUser(string username)
@@ -86,6 +94,21 @@ namespace Hotel_Management
                     builder.Append(bytes[i].ToString("x2"));
                 }
                 return builder.ToString();
+            }
+        }
+
+        private bool CheckIfUsernameExists(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM UserLogin WHERE USERNAME = @Username";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Username", username);
+
+                connection.Open();
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                return count > 0;
             }
         }
     }
