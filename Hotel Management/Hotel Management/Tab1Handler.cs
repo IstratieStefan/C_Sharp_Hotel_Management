@@ -13,6 +13,31 @@ namespace Hotel_Management
     {
         private readonly string connectionString;
 
+
+        private readonly HashSet<string> validCountries = new HashSet<string>
+        {
+            "afghanistan", "albania", "algeria", "andorra", "angola", "antigua and barbuda", "argentina", "armenia", "australia", "austria",
+            "azerbaijan", "bahamas", "bahrain", "bangladesh", "barbados", "belarus", "belgium", "belize", "benin", "bhutan",
+            "bolivia", "bosnia and herzegovina", "botswana", "brazil", "brunei", "bulgaria", "burkina faso", "burundi", "cabo verde", "cambodia",
+            "cameroon", "canada", "central african republic", "chad", "chile", "china", "colombia", "comoros", "congo (brazzaville)", "congo (kinshasa)",
+            "costa rica", "croatia", "cuba", "cyprus", "czech republic", "denmark", "djibouti", "dominica", "dominican republic", "ecuador",
+            "egypt", "el salvador", "equatorial guinea", "eritrea", "estonia", "eswatini", "ethiopia", "fiji", "finland", "france",
+            "gabon", "gambia", "georgia", "germany", "ghana", "greece", "grenada", "guatemala", "guinea", "guinea-bissau",
+            "guyana", "haiti", "honduras", "hungary", "iceland", "india", "indonesia", "iran", "iraq", "ireland",
+            "israel", "italy", "ivory coast", "jamaica", "japan", "jordan", "kazakhstan", "kenya", "kiribati", "korea north",
+            "korea south", "kosovo", "kuwait", "kyrgyzstan", "laos", "latvia", "lebanon", "lesotho", "liberia", "libya",
+            "liechtenstein", "lithuania", "luxembourg", "madagascar", "malawi", "malaysia", "maldives", "mali", "malta", "marshall islands",
+            "mauritania", "mauritius", "mexico", "micronesia", "moldova", "monaco", "mongolia", "montenegro", "morocco", "mozambique",
+            "myanmar", "namibia", "nauru", "nepal", "netherlands", "new zealand", "nicaragua", "niger", "nigeria", "north macedonia",
+            "norway", "oman", "pakistan", "palau", "panama", "papua new guinea", "paraguay", "peru", "philippines", "poland",
+            "portugal", "qatar", "romania", "russia", "rwanda", "saint kitts and nevis", "saint lucia", "saint vincent and the grenadines", "samoa", "san marino",
+            "sao tome and principe", "saudi arabia", "senegal", "serbia", "seychelles", "sierra leone", "singapore", "slovakia", "slovenia", "solomon islands",
+            "somalia", "south africa", "south sudan", "spain", "sri lanka", "sudan", "suriname", "sweden", "switzerland", "syria",
+            "taiwan", "tajikistan", "tanzania", "thailand", "timor-leste", "togo", "tonga", "trinidad and tobago", "tunisia", "turkey",
+            "turkmenistan", "tuvalu", "uganda", "ukraine", "united arab emirates", "united kingdom", "united states", "uruguay", "uzbekistan", "vanuatu",
+            "vatican city", "venezuela", "vietnam", "yemen", "zambia", "zimbabwe"
+        };
+
         public Tab1Handler()
         {
             string dbPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Tab1DB.mdf");
@@ -103,6 +128,31 @@ namespace Hotel_Management
 
             return dataTable;
         }
+
+        private bool IsValidPhoneNumber(string phone)
+        {
+            // Max total length for phone numbers (including +)
+            const int maxLength = 16; // + followed by up to 15 digits
+
+            if (phone.Length > maxLength)
+            {
+                MessageBox.Show("Phone number is too long. Maximum length is 16 characters including '+'.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Matches international format like +123456789012
+            string pattern = @"^\+\d{8,15}$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(phone, pattern))
+            {
+                MessageBox.Show("Phone must be in international format, e.g., +40712345678.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
         private bool ValidateFields(string id, string firstName, string lastName, string phone, string country)
         {
             if (string.IsNullOrWhiteSpace(id))
@@ -141,9 +191,8 @@ namespace Hotel_Management
                 return false;
             }
 
-            if (!int.TryParse(phone, out _))
-            {
-                MessageBox.Show("Phone must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if(!IsValidPhoneNumber(phone))
+{
                 return false;
             }
 
@@ -158,11 +207,12 @@ namespace Hotel_Management
                 MessageBox.Show("Last Name must be a valid string.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (!IsString(country))
+            if (!validCountries.Contains(country.ToLower()))
             {
-                MessageBox.Show("Country must be a valid string.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid country name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
 
             return true;
         }

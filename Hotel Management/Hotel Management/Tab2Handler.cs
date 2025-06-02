@@ -120,6 +120,30 @@ namespace Hotel_Management
             return dataTable;
         }
 
+        private bool IsValidPhoneNumber(string phone)
+        {
+            // Max total length for phone numbers (including +)
+            const int maxLength = 16; // + followed by up to 15 digits
+
+            if (phone.Length > maxLength)
+            {
+                MessageBox.Show("Phone number is too long. Maximum length is 16 characters including '+'.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Matches international format like +123456789012
+            string pattern = @"^\+\d{8,15}$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(phone, pattern))
+            {
+                MessageBox.Show("Phone must be in international format, e.g., +40712345678.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
         private bool ValidateFields(int Number, string Type, string Phone, string Free)
         {
             if (Number <= 0)
@@ -134,9 +158,9 @@ namespace Hotel_Management
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(Phone) || !IsPhoneNumber(Phone))
+            if (string.IsNullOrWhiteSpace(Phone) || !IsValidPhoneNumber(Phone))
             {
-                MessageBox.Show("Invalid phone number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Already handles message box inside IsValidPhoneNumber
                 return false;
             }
 
@@ -149,10 +173,6 @@ namespace Hotel_Management
             return true;
         }
 
-        private bool IsPhoneNumber(string value)
-        {
-            return value.All(char.IsDigit);
-        }
 
         private bool CheckIfNumberExists(int Number)
         {
