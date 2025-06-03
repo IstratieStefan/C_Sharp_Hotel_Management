@@ -158,9 +158,14 @@ namespace Hotel_Management
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(Phone) || !IsValidPhoneNumber(Phone))
+            if (string.IsNullOrWhiteSpace(Phone))
             {
-                // Already handles message box inside IsValidPhoneNumber
+                MessageBox.Show("Phone number cannot be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!IsValidPhoneNumber(Phone))
+            {
+                MessageBox.Show("Invalid phone number format.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

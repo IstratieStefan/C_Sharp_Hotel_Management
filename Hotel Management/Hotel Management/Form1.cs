@@ -135,19 +135,52 @@ namespace Hotel_Management
         {
             try
             {
-                int reservationId = Convert.ToInt32(TextBox_ReservationId.Text);
-                int clientId = Convert.ToInt32(TextBox_ClientId.Text);
+                // Validate Reservation ID
+                if (!int.TryParse(TextBox_ReservationId.Text, out int reservationId))
+                {
+                    MessageBox.Show("Please enter a valid Reservation ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validate Client ID
+                if (!int.TryParse(TextBox_ClientId.Text, out int clientId))
+                {
+                    MessageBox.Show("Please enter a valid Client ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validate Room Type
+                if (ComboBox_RoomType_Reservation.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a Room Type.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 string roomType = ComboBox_RoomType_Reservation.SelectedItem.ToString();
-                int roomNumber = Convert.ToInt32(TextBox_RoomNumber_Reservation.Text);
+
+                // Validate Room Number
+                if (!int.TryParse(TextBox_RoomNumber_Reservation.Text, out int roomNumber))
+                {
+                    MessageBox.Show("Please enter a valid Room Number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validate Date Range
                 DateTime dateIn = dateTimePicker_In.Value;
                 DateTime dateOut = dateTimePicker_Out.Value;
+                if (dateIn >= dateOut)
+                {
+                    MessageBox.Show("Check-out date must be later than check-in date.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                // Add Reservation
                 tab3Handler.AddReservation(reservationId, clientId, roomType, roomNumber, dateIn, dateOut);
                 LoadDataTab3();
+                MessageBox.Show("Reservation added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -393,9 +426,15 @@ namespace Hotel_Management
             try
             {
                 int number = Convert.ToInt32(TextBox_RoomNumber.Text);
-                string type = ComboBox_RoomType.SelectedItem.ToString();
+                string type = ComboBox_RoomType.SelectedItem?.ToString() ?? string.Empty; // Handle null for ComboBox_RoomType
                 string phone = TextBox_RoomPhone.Text;
-                string free = ComboBox_Free.SelectedItem.ToString();
+                string free = ComboBox_Free.SelectedItem?.ToString() ?? string.Empty; // Handle null for ComboBox_Free
+
+                if (string.IsNullOrEmpty(free))
+                {
+                    MessageBox.Show("Please select a value for 'Free' status.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 tab2Handler.AddRoom(number, type, phone, free);
                 LoadDataTab2();
